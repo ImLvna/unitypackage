@@ -1,7 +1,7 @@
 {
   "name": "unitypackage2",
   "description": "Unity Package Creator and Extractor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "node": ">=21.5.0"
   },

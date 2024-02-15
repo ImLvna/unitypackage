@@ -8,7 +8,8 @@ import { createUnityPackage, extractUnityPackage } from "./index";
   console.log("Creating unity package");
   await createUnityPackage(
     "./test",
-    "Assets/Test Folder",
+    "Assets",
+    "Test Folder",
     "./test/out.unitypackage"
   );
 

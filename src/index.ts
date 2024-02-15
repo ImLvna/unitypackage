@@ -93,11 +93,13 @@ export async function extractUnityPackage(
 
 export async function createUnityPackage(
   projectDir: string,
+  baseDir = "./",
   filesDir: string,
   output: string
 ) {
   return await createUnityPackageFromMetaFiles(
     projectDir,
+    baseDir,
     readdirSync(join(projectDir, filesDir), {
       recursive: true,
       encoding: "utf8",
@@ -110,6 +112,7 @@ export async function createUnityPackage(
 
 export async function createUnityPackageFromMetaFiles(
   projectDir: string,
+  baseDir = "./",
   metaFiles: string[],
   output: string
 ) {
@@ -129,7 +132,7 @@ export async function createUnityPackageFromMetaFiles(
     }
     await copyFile(metaPath, join(dir, "asset.meta"));
 
-    await writeFile(join(dir, "pathname"), assetPath);
+    await writeFile(join(dir, "pathname"), join(baseDir, assetPath));
   }
 
   // Create the tarball
