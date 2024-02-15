@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-node@v4.0.1
         with:
           node-version: 21.5.0
-          registry-url: https://npm.pkg.github.com/
+          registry-url: https://registry.npmjs.org
           cache: 'pnpm'
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
@@ -25,4 +25,4 @@ jobs:
       
       - run: pnpm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

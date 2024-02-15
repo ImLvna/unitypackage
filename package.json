@@ -1,5 +1,5 @@
 {
-  "name": "@imlvna/unitypackage",
+  "name": "unitypackage2",
   "description": "Unity Package Creator and Extractor",
   "version": "1.0.0",
   "engines": {
@@ -13,9 +13,6 @@
     "format": "biome format . --write",
     "fix": "biome check . --apply",
     "postinstall": "husky install"
-  },
-  "publishConfig": {
-    "@imlvna:registry": "https://npm.pkg.github.com"
   },
   "keywords": [],
   "author": "",
